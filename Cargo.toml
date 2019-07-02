@@ -33,5 +33,10 @@ wasm-bindgen = { version = "0.2", optional = true }
 [dev-dependencies]
 wasm-bindgen-test = "0.2"
 
-[target.'cfg(feature="wasm-bindgen")'.dependencies]
-web-sys = {version="0.3.19", optional = true, features=['Window', 'Performance', 'PerformanceTiming']}
+[target.wasm32-unknown-unknown.dependencies.web-sys]
+version="0.3.19"
+features=[
+    'Window', 
+    'Performance',
+    'PerformanceTiming'
+]

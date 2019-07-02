@@ -9,6 +9,8 @@ extern crate stdweb;
 #[cfg(feature = "now")]
 extern crate time;
 
+#[cfg(any(feature = "now", feature = "wasm-bindgen"))]
+extern crate web_sys;
 
 #[cfg(any(
 not(any(target_arch = "wasm32", target_arch = "asmjs")),
